@@ -49,10 +49,10 @@
     series_types: {}
     y_axes: [{label: Rows Loaded, orientation: left, series: [{id: load_history.total_row_count,
             name: Load History Total Row Count, axisId: load_history.total_row_count,
-            __FILE: snowflake_usage_block/account_usage_dashboard.dashboard.lookml,
+            __FILE: snowflake_usage_block_qa/account_usage_dashboard.dashboard.lookml,
             __LINE_NUM: 603}], showLabels: true, showValues: true, valueFormat: '[>=1000000]0.0,,"
           M";[>=100000]0.0," K";0', unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
-        type: linear, __FILE: snowflake_usage_block/account_usage_dashboard.dashboard.lookml,
+        type: linear, __FILE: snowflake_usage_block_qa/account_usage_dashboard.dashboard.lookml,
         __LINE_NUM: 600}]
     x_axis_label: Load Date
     single_value_title: Rows Loaded Last 7 Days
@@ -64,7 +64,7 @@
     height: 7
   - title: Total Rows Loaded - Last 2 Weeks
     name: Total Rows Loaded - Last 2 Weeks
-    model: snowflake_usage_block
+    model: snowflake_usage_block_qa
     explore: load_history
     type: looker_column
     fields: [load_history.total_row_count, load_history.last_load_time_date]
@@ -104,10 +104,10 @@
     series_types: {}
     y_axes: [{label: Rows Loaded, orientation: left, series: [{id: load_history.total_row_count,
             name: Load History Total Row Count, axisId: load_history.total_row_count,
-            __FILE: snowflake_usage_block/account_usage_dashboard.dashboard.lookml,
+            __FILE: snowflake_usage_block_qa/account_usage_dashboard.dashboard.lookml,
             __LINE_NUM: 673}], showLabels: true, showValues: true, valueFormat: '[>=1000000]0.0,,"
           M";[>=100000]0.0," K";0', unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
-        type: linear, __FILE: snowflake_usage_block/account_usage_dashboard.dashboard.lookml,
+        type: linear, __FILE: snowflake_usage_block_qa/account_usage_dashboard.dashboard.lookml,
         __LINE_NUM: 670}]
     x_axis_label: Load Date
     listen: {}
@@ -117,7 +117,7 @@
     height: 7
   - title: Query Volume and Runtime
     name: Query Volume and Runtime
-    model: snowflake_usage_block
+    model: snowflake_usage_block_qa
     explore: query_history
     type: looker_area
     fields: [query_history.start_week, query_history.query_count, query_history.average_execution_time]
@@ -137,16 +137,16 @@
     y_axis_gridlines: true
     show_view_names: false
     y_axes: [{label: Query Run Count, orientation: left, series: [{id: query_history.query_count,
-            name: Query History Query Count, axisId: query_history.query_count, __FILE: snowflake_usage_block/account_usage_dashboard.dashboard.lookml,
+            name: Query History Query Count, axisId: query_history.query_count, __FILE: snowflake_usage_block_qa/account_usage_dashboard.dashboard.lookml,
             __LINE_NUM: 1058}], showLabels: true, showValues: true, valueFormat: '[>=1000000]0.00,,"M";[>=1000]0.00,"K";0.00''',
         unpinAxis: false, tickDensity: default, tickDensityCustom: 5, type: linear,
-        __FILE: snowflake_usage_block/account_usage_dashboard.dashboard.lookml, __LINE_NUM: 1055},
+        __FILE: snowflake_usage_block_qa/account_usage_dashboard.dashboard.lookml, __LINE_NUM: 1055},
       {label: Average Query Execution TIme (seconds), orientation: left, series: [
           {id: query_history.average_execution_time, name: Query History Average Execution
-              Time, axisId: query_history.average_execution_time, __FILE: snowflake_usage_block/account_usage_dashboard.dashboard.lookml,
+              Time, axisId: query_history.average_execution_time, __FILE: snowflake_usage_block_qa/account_usage_dashboard.dashboard.lookml,
             __LINE_NUM: 1071}], showLabels: true, showValues: true, valueFormat: '0',
         unpinAxis: false, tickDensity: default, tickDensityCustom: 5, type: linear,
-        __FILE: snowflake_usage_block/account_usage_dashboard.dashboard.lookml, __LINE_NUM: 1068}]
+        __FILE: snowflake_usage_block_qa/account_usage_dashboard.dashboard.lookml, __LINE_NUM: 1068}]
     show_y_axis_labels: true
     show_y_axis_ticks: true
     y_axis_tick_density: default
@@ -191,7 +191,7 @@
     height: 8
   - title: Total Jobs (MTD)
     name: Total Jobs (MTD)
-    model: snowflake_usage_block
+    model: snowflake_usage_block_qa
     explore: query_history
     type: single_value
     fields: [query_history.current_mtd_query_count, query_history.prior_mtd_query_count]
@@ -241,7 +241,7 @@
     height: 4
   - title: Untitled
     name: Untitled
-    model: snowflake_usage_block
+    model: snowflake_usage_block_qa
     explore: warehouse_metering_history
     type: single_value
     fields: [warehouse_metering_history.current_mtd_credits_used, warehouse_metering_history.prior_mtd_credits_used]
@@ -291,7 +291,7 @@
     height: 4
   - title: Execution Time on Select Statements
     name: Execution Time on Select Statements
-    model: snowflake_usage_block
+    model: snowflake_usage_block_qa
     explore: query_history
     type: single_value
     fields: [query_history.current_mtd_avg_exec_time, query_history.prior_mtd_avg_exec_time]
@@ -346,7 +346,7 @@
     height: 4
   - title: Untitled3
     name: Untitled3
-    model: snowflake_usage_block
+    model: snowflake_usage_block_qa
     explore: storage_usage
     type: single_value
     fields: [storage_usage.curr_mtd_billable_tb, storage_usage.prior_mtd_billable_tb]
@@ -396,7 +396,7 @@
     height: 4
   - title: Warehouse Metering History - Total Credits by Month
     name: Warehouse Metering History - Total Credits by Month
-    model: snowflake_usage_block
+    model: snowflake_usage_block_qa
     explore: warehouse_metering_history
     type: looker_column
     fields: [warehouse_metering_history.start_month, warehouse_metering_history.total_credits_used,
@@ -449,7 +449,7 @@
     height: 8
   - title: Credits Used Over Time by Warehouse (MTD)
     name: Credits Used Over Time by Warehouse (MTD)
-    model: snowflake_usage_block
+    model: snowflake_usage_block_qa
     explore: warehouse_metering_history
     type: looker_column
     fields: [warehouse_metering_history.warehouse_name, warehouse_metering_history.total_credits_used,
@@ -503,7 +503,7 @@
     height: 8
   - title: Credits Used By Warehouse
     name: Credits Used By Warehouse
-    model: snowflake_usage_block
+    model: snowflake_usage_block_qa
     explore: warehouse_metering_history
     type: looker_column
     fields: [warehouse_metering_history.warehouse_name, warehouse_metering_history.total_credits_used]
@@ -556,7 +556,7 @@
     height: 8
   - title: Total Jobs by Warehouse (MTD)
     name: Total Jobs by Warehouse (MTD)
-    model: snowflake_usage_block
+    model: snowflake_usage_block_qa
     explore: query_history
     type: looker_column
     fields: [query_history.warehouse_name, query_history.prior_mtd_query_count, query_history.current_mtd_query_count]
@@ -579,8 +579,8 @@
     y_axes: [{label: Job Count, maxValue: !!null '', minValue: !!null '', orientation: left,
         showLabels: true, showValues: true, tickDensity: default, tickDensityCustom: 5,
         type: linear, unpinAxis: false, valueFormat: !!null '', series: [{id: query_history.count,
-            name: Query History, axisId: query_history.count, __FILE: snowflake_usage_block/account_usage_dashboard.dashboard.lookml,
-            __LINE_NUM: 114}], __FILE: snowflake_usage_block/account_usage_dashboard.dashboard.lookml,
+            name: Query History, axisId: query_history.count, __FILE: snowflake_usage_block_qa/account_usage_dashboard.dashboard.lookml,
+            __LINE_NUM: 114}], __FILE: snowflake_usage_block_qa/account_usage_dashboard.dashboard.lookml,
         __LINE_NUM: 102}]
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -627,7 +627,7 @@
     height: 8
   - title: Billable TB by Month
     name: Billable TB by Month
-    model: snowflake_usage_block
+    model: snowflake_usage_block_qa
     explore: storage_usage
     type: looker_line
     fields: [storage_usage.billable_tb, storage_usage.usage_month, storage_usage.average_storage_tb]
@@ -646,9 +646,9 @@
     y_axis_gridlines: true
     show_view_names: false
     y_axes: [{label: Billable Tb, orientation: left, series: [{id: storage_usage.billable_tb,
-            name: Storage Usage Billable Tb, axisId: storage_usage.billable_tb, __FILE: snowflake_usage_block/account_usage_dashboard.dashboard.lookml,
+            name: Storage Usage Billable Tb, axisId: storage_usage.billable_tb, __FILE: snowflake_usage_block_qa/account_usage_dashboard.dashboard.lookml,
             __LINE_NUM: 982}], showLabels: true, showValues: true, unpinAxis: false,
-        tickDensity: default, tickDensityCustom: 5, type: linear, __FILE: snowflake_usage_block/account_usage_dashboard.dashboard.lookml,
+        tickDensity: default, tickDensityCustom: 5, type: linear, __FILE: snowflake_usage_block_qa/account_usage_dashboard.dashboard.lookml,
         __LINE_NUM: 979}]
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -685,7 +685,7 @@
     height: 7
   - title: Average Execution Time by Query Type and Warehouse Size (MTD)
     name: Average Execution Time by Query Type and Warehouse Size (MTD)
-    model: snowflake_usage_block
+    model: snowflake_usage_block_qa
     explore: query_history
     type: looker_column
     fields: [query_history.query_type, query_history.average_execution_time, query_history.query_count,
@@ -711,8 +711,8 @@
         orientation: left, showLabels: true, showValues: true, tickDensity: default,
         tickDensityCustom: !!null '', type: linear, unpinAxis: false, valueFormat: !!null '',
         series: [{id: query_history.average_execution_time, name: Average Execution
-              Time, axisId: query_history.average_execution_time, __FILE: snowflake_usage_block/account_usage_dashboard.dashboard.lookml,
-            __LINE_NUM: 762}], __FILE: snowflake_usage_block/account_usage_dashboard.dashboard.lookml,
+              Time, axisId: query_history.average_execution_time, __FILE: snowflake_usage_block_qa/account_usage_dashboard.dashboard.lookml,
+            __LINE_NUM: 762}], __FILE: snowflake_usage_block_qa/account_usage_dashboard.dashboard.lookml,
         __LINE_NUM: 750}]
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -758,7 +758,7 @@
     height: 8
   - title: Average Execution Time by User (MTD)
     name: Average Execution Time by User (MTD)
-    model: snowflake_usage_block
+    model: snowflake_usage_block_qa
     explore: query_history
     type: looker_bar
     fields: [query_history.user_name, query_history.average_execution_time, query_history.median_queued_overload_time]
@@ -774,8 +774,8 @@
         orientation: left, showLabels: true, showValues: true, tickDensity: default,
         tickDensityCustom: !!null '', type: linear, unpinAxis: false, valueFormat: !!null '',
         series: [{id: query_history.average_execution_time, name: Average Execution
-              Time, axisId: query_history.average_execution_time, __FILE: snowflake_usage_block/account_usage_dashboard.dashboard.lookml,
-            __LINE_NUM: 188}], __FILE: snowflake_usage_block/account_usage_dashboard.dashboard.lookml,
+              Time, axisId: query_history.average_execution_time, __FILE: snowflake_usage_block_qa/account_usage_dashboard.dashboard.lookml,
+            __LINE_NUM: 188}], __FILE: snowflake_usage_block_qa/account_usage_dashboard.dashboard.lookml,
         __LINE_NUM: 176}]
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -820,7 +820,7 @@
     height: 8
   - title: Database Storage Growth
     name: Database Storage Growth
-    model: snowflake_usage_block
+    model: snowflake_usage_block_qa
     explore: storage_usage
     type: looker_line
     fields: [storage_usage.billable_tb, storage_usage.usage_month, storage_usage.database_name]
@@ -841,35 +841,35 @@
     y_axis_gridlines: true
     show_view_names: false
     y_axes: [{label: Billable Tb, orientation: left, series: [{id: CCDB - storage_usage.billable_tb,
-            name: CCDB, axisId: storage_usage.billable_tb, __FILE: snowflake_usage_block/account_usage_dashboard.dashboard.lookml,
+            name: CCDB, axisId: storage_usage.billable_tb, __FILE: snowflake_usage_block_qa/account_usage_dashboard.dashboard.lookml,
             __LINE_NUM: 881}, {id: DATABLOCKS - storage_usage.billable_tb, name: DATABLOCKS,
-            axisId: storage_usage.billable_tb, __FILE: snowflake_usage_block/account_usage_dashboard.dashboard.lookml,
+            axisId: storage_usage.billable_tb, __FILE: snowflake_usage_block_qa/account_usage_dashboard.dashboard.lookml,
             __LINE_NUM: 884}, {id: DEMO_DB - storage_usage.billable_tb, name: DEMO_DB,
-            axisId: storage_usage.billable_tb, __FILE: snowflake_usage_block/account_usage_dashboard.dashboard.lookml,
+            axisId: storage_usage.billable_tb, __FILE: snowflake_usage_block_qa/account_usage_dashboard.dashboard.lookml,
             __LINE_NUM: 887}, {id: EUROPCAR - storage_usage.billable_tb, name: EUROPCAR,
-            axisId: storage_usage.billable_tb, __FILE: snowflake_usage_block/account_usage_dashboard.dashboard.lookml,
+            axisId: storage_usage.billable_tb, __FILE: snowflake_usage_block_qa/account_usage_dashboard.dashboard.lookml,
             __LINE_NUM: 890}, {id: FAA - storage_usage.billable_tb, name: FAA, axisId: storage_usage.billable_tb,
-            __FILE: snowflake_usage_block/account_usage_dashboard.dashboard.lookml,
+            __FILE: snowflake_usage_block_qa/account_usage_dashboard.dashboard.lookml,
             __LINE_NUM: 893}, {id: LOOKER_TEST - storage_usage.billable_tb, name: LOOKER_TEST,
-            axisId: storage_usage.billable_tb, __FILE: snowflake_usage_block/account_usage_dashboard.dashboard.lookml,
+            axisId: storage_usage.billable_tb, __FILE: snowflake_usage_block_qa/account_usage_dashboard.dashboard.lookml,
             __LINE_NUM: 896}, {id: META - storage_usage.billable_tb, name: META, axisId: storage_usage.billable_tb,
-            __FILE: snowflake_usage_block/account_usage_dashboard.dashboard.lookml,
+            __FILE: snowflake_usage_block_qa/account_usage_dashboard.dashboard.lookml,
             __LINE_NUM: 899}, {id: NAME_GAME - storage_usage.billable_tb, name: NAME_GAME,
-            axisId: storage_usage.billable_tb, __FILE: snowflake_usage_block/account_usage_dashboard.dashboard.lookml,
+            axisId: storage_usage.billable_tb, __FILE: snowflake_usage_block_qa/account_usage_dashboard.dashboard.lookml,
             __LINE_NUM: 902}, {id: NY_TRIP_DB - storage_usage.billable_tb, name: NY_TRIP_DB,
-            axisId: storage_usage.billable_tb, __FILE: snowflake_usage_block/account_usage_dashboard.dashboard.lookml,
+            axisId: storage_usage.billable_tb, __FILE: snowflake_usage_block_qa/account_usage_dashboard.dashboard.lookml,
             __LINE_NUM: 905}, {id: SNOW_TWITTER - storage_usage.billable_tb, name: SNOW_TWITTER,
-            axisId: storage_usage.billable_tb, __FILE: snowflake_usage_block/account_usage_dashboard.dashboard.lookml,
+            axisId: storage_usage.billable_tb, __FILE: snowflake_usage_block_qa/account_usage_dashboard.dashboard.lookml,
             __LINE_NUM: 908}, {id: THELOOK - storage_usage.billable_tb, name: THELOOK,
-            axisId: storage_usage.billable_tb, __FILE: snowflake_usage_block/account_usage_dashboard.dashboard.lookml,
+            axisId: storage_usage.billable_tb, __FILE: snowflake_usage_block_qa/account_usage_dashboard.dashboard.lookml,
             __LINE_NUM: 911}, {id: THELOOK_OLD - storage_usage.billable_tb, name: THELOOK_OLD,
-            axisId: storage_usage.billable_tb, __FILE: snowflake_usage_block/account_usage_dashboard.dashboard.lookml,
+            axisId: storage_usage.billable_tb, __FILE: snowflake_usage_block_qa/account_usage_dashboard.dashboard.lookml,
             __LINE_NUM: 914}, {id: TPCH - storage_usage.billable_tb, name: TPCH, axisId: storage_usage.billable_tb,
-            __FILE: snowflake_usage_block/account_usage_dashboard.dashboard.lookml,
+            __FILE: snowflake_usage_block_qa/account_usage_dashboard.dashboard.lookml,
             __LINE_NUM: 917}, {id: UPLOAD_TEST - storage_usage.billable_tb, name: UPLOAD_TEST,
-            axisId: storage_usage.billable_tb, __FILE: snowflake_usage_block/account_usage_dashboard.dashboard.lookml,
+            axisId: storage_usage.billable_tb, __FILE: snowflake_usage_block_qa/account_usage_dashboard.dashboard.lookml,
             __LINE_NUM: 920}], showLabels: true, showValues: true, unpinAxis: false,
-        tickDensity: default, tickDensityCustom: 5, type: linear, __FILE: snowflake_usage_block/account_usage_dashboard.dashboard.lookml,
+        tickDensity: default, tickDensityCustom: 5, type: linear, __FILE: snowflake_usage_block_qa/account_usage_dashboard.dashboard.lookml,
         __LINE_NUM: 878}]
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -905,7 +905,7 @@
     height: 7
   - title: Failed Logins by User and Connecting Client (MTD)
     name: Failed Logins by User and Connecting Client (MTD)
-    model: snowflake_usage_block
+    model: snowflake_usage_block_qa
     explore: login_history
     type: table
     fields: [login_history.user_name, login_history.logins, login_history.total_failed_logins,
@@ -967,7 +967,7 @@
     height: 9
   - title: Failed Logins by User (MTD)
     name: Failed Logins by User (MTD)
-    model: snowflake_usage_block
+    model: snowflake_usage_block_qa
     explore: login_history
     type: table
     fields: [login_history.user_name, login_history.logins, login_history.total_failed_logins,

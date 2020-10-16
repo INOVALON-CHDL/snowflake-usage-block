@@ -1,5 +1,5 @@
-- dashboard: snowflake_usage
-  title: Snowflake Usage
+- dashboard: snowflake_usage_QA
+  title: Snowflake Usage QA
   layout: newspaper
   elements:
   - title: Data Loading

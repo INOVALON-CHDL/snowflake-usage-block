@@ -4,7 +4,7 @@
   elements:
   - title: Data Loading
     name: Data Loading
-    model: snowflake_usage_block
+    model: snowflake_usage_block_QA
     explore: load_history
     type: single_value
     fields: [load_history.total_row_count, load_history.total_error_count]

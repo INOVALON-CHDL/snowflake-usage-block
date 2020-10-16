@@ -1,25 +1,23 @@
-connection: "account_usage_QA"
+connection: "account_usage_qa"
 
 # include all the views
 include: "*.view"
 
 # include all the dashboards
-include: "*.dashboard"
+include: "account_usage_dashboard_QA.dashboard.lookml"
 
 datagroup: snowflake_usage_block_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
   max_cache_age: "1 hour"
 }
 
+named_value_format: conditional_to_millions {
+  value_format: "[>=1000000]0,,\"M\";[>=1000]0,\"K\";0"
+}
+
 persist_with: snowflake_usage_block_default_datagroup
 
 explore: login_history {
-#   join: user_login_facts {
-#     view_label: "Login History"
-#     type: left_outer
-#     sql_on: ${user_login_facts.login_name} = ${login_history.user_name} ;;
-#     relationship: many_to_many
-#   }
 }
 
 explore: query_history {
@@ -52,9 +50,9 @@ explore: load_history {
   }
 }
 
-explore: user_login_facts {}
-
 explore: storage_usage {}
+
+explore: warehouse_metering_history {}
 
 # explore: columns {}
 #
@@ -77,5 +75,3 @@ explore: storage_usage {}
 # explore: tables {}
 #
 # explore: views {}
-
-explore: warehouse_metering_history {}

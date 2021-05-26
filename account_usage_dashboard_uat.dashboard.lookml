@@ -1,5 +1,5 @@
 - dashboard: snowflake_usage_uat
-  title: Snowflake Usage Production
+  title: Snowflake Usage UAT
   layout: newspaper
   elements:
   - title: Data Loading
